@@ -2,6 +2,8 @@ import test
 import extract_groundtruth
 import get_score
 
+
+extract_groundtruth.extrct_groundtruth()
 test.test()
-#extract_groundtruth.extrct_groundtruth()
-#get_score.get_score()
+
+# get_score.get_score()

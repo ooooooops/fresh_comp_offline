@@ -1,3 +1,6 @@
+import numpy
+
+
 def extract_feature(days_span):
     print('extract_feature:days_span=%d' % days_span)
     feat_set = []
@@ -41,6 +44,5 @@ def extract_feature(days_span):
             else:
                 labels.append(0)
         # break
-    # print('buy count = %d' % buy_count)
-    # print('labels count = %d' % len(labels))
+    feat_set = numpy.log1p(feat_set)
     return feat_set, labels, float(buy_count) / float(len(labels))

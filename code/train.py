@@ -2,6 +2,8 @@ import feat_extract as fe
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+# from sklearn.ensemble import
 import numpy as np
 
 
@@ -15,12 +17,13 @@ def train():
         weights.append(weight)
         X = np.mat(feats)
         y = np.array(labels).T
-        print(np.shape(y))
-        print(y)
+        # print(np.shape(y))
+        # print(y)
         model = LogisticRegression()
         # model = DecisionTreeClassifier()
         # model = RandomForestClassifier()
         # model.predict_proba()
+        # model = GradientBoostingClassifier()
         model.fit(X, y)
         models.append(model)
         # break
